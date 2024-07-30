@@ -1,16 +1,6 @@
+import { Field, Form, Button } from "@/components/ui";
+
 import styled from "styled-components";
-
-const Input = styled.input`
-  background: transparent;
-  color: ${(props) => props.theme.colors.white};
-  border: 1px solid ${(props) => props.theme.colors.white};
-  border-radius: 200px;
-  padding: ${(props) => props.theme.sizes.sm} ${(props) => props.theme.sizes.xs};
-
-  &::placeholder{
-    color: ${(props) => props.theme.colors.white};
-  }
-`;
 
 const Main = styled.main`
   display: flex;
@@ -20,36 +10,32 @@ const Main = styled.main`
   flex: 1;
 `;
 
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: ${(props) => props.theme.sizes.sm};
-`;
-
-const Label = styled.label`
-  font-size: ${(props) => props.theme.sizes.base};
-  color: ${(props) => props.theme.colors.white};
-`;
-
-const Field = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: ${(props) => props.theme.sizes.xs};
-`;
-
 export function SignUp() {
   return (
     <Main>
       <Form>
-        <Field>
-          <Label>Email</Label>
-          <Input type="text" placeholder="teste" />
-        </Field>
+        <Field
+          label="Nome"
+          placeholder="Digite seu nome"
+          type="text"
+          id="name"
+        />
 
-        <Field>
-          <Label>Senha</Label>
-          <Input type="text" placeholder="teste" />
-        </Field>
+        <Field
+          label="Email"
+          placeholder="Digite seu email"
+          type="email"
+          id="email"
+        />
+
+        <Field
+          label="Senha"
+          placeholder="Digite sua senha"
+          type="password"
+          id="password"
+        />
+
+        <Button type="submit">Registrar</Button>
       </Form>
     </Main>
   );
