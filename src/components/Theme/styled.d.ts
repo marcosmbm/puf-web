@@ -11,5 +11,17 @@ declare module "styled-components" {
       raisinBlack: string;
       turquoise: string;
     };
+    sizes: {
+      xs: string;
+      sm: string;
+      md: string;
+      base: string;
+      lg: string;
+      xl: string;
+      "2xl": string;
+      "3xl": string;
+      "4xl": string;
+      "5xl": string;
+    };
   }
 }

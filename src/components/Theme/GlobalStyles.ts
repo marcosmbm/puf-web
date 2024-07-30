@@ -7,10 +7,20 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html, body{
+        height: 100%;
+    }
+
+    #root{
+        height: 100%;
+        display: flex;
+    }
+
     body{
         font-family: sans-serif;
         background-color: ${(props) => props.theme.colors.raisinBlack};
         color: ${(props) => props.theme.colors.white};
+        font-size: ${(props) => props.theme.sizes.base};
     }
 
     button{
@@ -30,5 +40,6 @@ export const GlobalStyles = createGlobalStyle`
     input{
         border: none;
         outline: none;
+        font-size: inherit;
     }
 `;
